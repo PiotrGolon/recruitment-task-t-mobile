@@ -34,13 +34,13 @@ export default function Home() {
   // Handle error state
   if (error)
     return (
-      <div className="max-w-screen-2xl mx-auto w-full pb-10 -mt-16">
+      <div className="max-w-screen-2xl mx-auto w-full -mt-16">
         <ErrorCard message="Error loading stories. Please try again later." />
       </div>
     );
 
   return (
-    <div className="max-w-screen-2xl mx-auto w-full pb-10 -mt-24">
+    <div className="max-w-screen-2xl mx-auto w-full -mt-24">
       {/* Stories Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {stories?.map((story: Story) => (
