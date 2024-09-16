@@ -91,15 +91,15 @@ Make sure to run `npm run build` before using this command:
 
 ## Technologies Used
 
-Next.js: React framework for building server-side rendered applications.
-React Hook Form: For managing form state and validation.
-Zod: TypeScript-first schema validation.
-Shadcn-ui: Components collection.
-Drizzle ORM: Lightweight ORM for database interactions.
-Hono: A small, simple, and fast web framework.
-Tailwind CSS: Utility-first CSS framework for styling.
-Vercel: Deployment platform for frontend applications.
-Lucide-react: Icon library for React.
+- Next.js: React framework for building server-side rendered applications.
+- React Hook Form: For managing form state and validation.
+- Zod: TypeScript-first schema validation.
+- Shadcn-ui: Components collection.
+- Drizzle ORM: Lightweight ORM for database interactions.
+- Hono: A small, simple, and fast web framework.
+- Tailwind CSS: Utility-first CSS framework for styling.
+- Vercel: Deployment platform for frontend applications.
+- Lucide-react: Icon library for React.
 
 ## API Connection
 
@@ -114,7 +114,11 @@ Fetching Top Stories:
 
 ## Feedback Form
 
-The feedback form collects the following information: - Name - Email - Feedback
+The feedback form collects the following information:
+
+- Name
+- Email
+- Feedback
 
 ### Form Validation
 
