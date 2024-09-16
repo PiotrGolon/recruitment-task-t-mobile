@@ -54,97 +54,112 @@ Ensure you have the following installed on your machine:
    cd recruitment-task-t-mobile
    ```
 
-   ```Install dependencies:
+2. **Install dependencies:**
 
-    Using npm:
-    npm install
+   ```Using npm:
+   npm install
    ```
 
    Environment Variables
    Create a .env.local file in the root directory and add the following environment variables:
 
-2. **Database connection string:**
+3. **Database connection string:**
 
-DATABASE_URL=postgresql://username:password@host/database?sslmode=require
+`DATABASE_URL=postgresql://username:password@host/database?sslmode=require`
 
-# Public application URL
+## Public application URL
 
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 
 Note: Replace username, password, host, and database with your actual database credentials. Do not commit .env.local to version control. Ensure .env.local is added to your .gitignore file to prevent accidental commits.
 
-3. Running the Development Server
+### Running the Development Server
 
 Start the development server:
 
     npm run dev
 
+Builds the app for production to the `.next` folder.  
+The build is optimized and minified for best performance:
+
+    npm run build
+
+Starts the production server after building the app.  
+Make sure to run `npm run build` before using this command:
+
+    npm run start
+
 ## Technologies Used
 
-    - Next.js: React framework for building server-side rendered applications.
-    - React Hook Form: For managing form state and validation.
-    - Zod: TypeScript-first schema validation.
-    - Shadcn-ui: Components collection.
-    - Drizzle ORM: Lightweight ORM for database interactions.
-    - Hono: A small, simple, and fast web framework.
-    - Tailwind CSS: Utility-first CSS framework for styling.
-    - Vercel: Deployment platform for frontend applications.
-    - Lucide-react: Icon library for React.
+Next.js: React framework for building server-side rendered applications.
+React Hook Form: For managing form state and validation.
+Zod: TypeScript-first schema validation.
+Shadcn-ui: Components collection.
+Drizzle ORM: Lightweight ORM for database interactions.
+Hono: A small, simple, and fast web framework.
+Tailwind CSS: Utility-first CSS framework for styling.
+Vercel: Deployment platform for frontend applications.
+Lucide-react: Icon library for React.
 
 ## API Connection
 
-    The application connects to the Hacker News API to fetch top stories and their details. It also uses a PostgreSQL database to store feedback submissions.
+The application connects to the Hacker News API to fetch top stories and their details. It also uses a PostgreSQL database to store feedback submissions.
 
-    Fetching Top Stories:
-        - Endpoint: https://hacker-news.firebaseio.com/v0/topstories.json
-        - Function: Retrieves a list of top story IDs.
-        - Details: The application fetches details for each story ID, including title, author, time, and number of comments.
-        - Feedback Form
+Fetching Top Stories:
+
+- Endpoint: https://hacker-news.firebaseio.com/v0/topstories.json
+- Function: Retrieves a list of top story IDs.
+- Details: The application fetches details for each story ID, including title, author, time, and number of comments.
+- Feedback Form
 
 ## Feedback Form
 
 The feedback form collects the following information: - Name - Email - Feedback
 
-### Form Validation:
+### Form Validation
 
-    - Name: Minimum 2 characters.
-    - Email: Must be a valid email address.
-    - Feedback: Minimum 4 characters.
-    Validation is handled using react-hook-form and Zod. Custom error messages are provided to guide the user in case of invalid input.
+1. Name: Minimum 2 characters.
+2. Email: Must be a valid email address.
+3. Feedback: Minimum 4 characters.
+
+Validation is handled using react-hook-form and Zod. Custom error messages are provided to guide the user in case of invalid input.
 
 ### Submission and Server-side Logging
 
-    When a user submits the feedback form:
-    - Validation: The form data is validated on the client side using react-hook-form and Zod.
-    - Submission: Upon successful validation, the data is sent to the server API.
-    - Logging: The server logs the feedback data to the console for review.
-    - Feedback to User: A success message is displayed to the user, and the form is cleared.
-    - Note: The form does not send data to an external server; it only logs the data on the server side for demonstration purposes.
+When a user submits the feedback form:
+
+- Validation: The form data is validated on the client side using react-hook-form and Zod.
+- Submission: Upon successful validation, the data is sent to the server API.
+- Logging: The server logs the feedback data to the console for review.
+- Feedback to User: A success message is displayed to the user, and the form is cleared.
+- Note: The form does not send data to an external server; it only logs the data on the server side for demonstration purposes.
 
 ## Responsive Design and Accessibility
 
-    The application is designed to be fully responsive, ensuring a seamless experience across various devices and screen sizes. It adheres to WCAG accessibility guidelines to make the application usable for all users.
+The application is designed to be fully responsive, ensuring a seamless experience across various devices and screen sizes. It adheres to WCAG accessibility guidelines to make the application usable for all users.
 
-    Key Accessibility Features
-        - Semantic HTML: Proper use of HTML elements for better accessibility.
-        - ARIA Attributes: Utilized where necessary to enhance screen reader support.
-        - Keyboard Navigation: Ensured that all interactive elements are accessible via keyboard.
-        - Color Contrast: Maintained sufficient color contrast for readability.
+Key Accessibility Features
+
+- Semantic HTML: Proper use of HTML elements for better accessibility.
+- ARIA Attributes: Utilized where necessary to enhance screen reader support.
+- Keyboard Navigation: Ensured that all interactive elements are accessible via keyboard.
+- Color Contrast: Maintained sufficient color contrast for readability.
 
 ## Deployment
 
-    The application is deployed on Vercel for optimal performance and scalability. Vercel provides seamless integration with Next.js, enabling efficient deployments and automatic optimizations.
+The application is deployed on Vercel for optimal performance and scalability. Vercel provides seamless integration with Next.js, enabling efficient deployments and automatic optimizations.
 
 ### Deploying on Vercel
 
-    To deploy your Next.js application on Vercel:
+To deploy your Next.js application on Vercel:
 
-        1. Sign up or log in to Vercel.
-        2. Import your GitHub repository containing the project.
-        3. Set up environment variables in the Vercel dashboard as specified in the .env.local file.
-        4. Deploy the application by following the prompts.
-        For more details, refer to the Next.js deployment documentation.
+1. Sign up or log in to Vercel.
+2. Import your GitHub repository containing the project.
+3. Set up environment variables in the Vercel dashboard as specified in the .env.local file.
+4. Deploy the application by following the prompts.
+
+For more details, refer to the Next.js deployment documentation.
 
 ## Contact
 
-    For any questions or feedback, please reach out via email.
+For any questions or feedback, please reach out via email.
