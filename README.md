@@ -91,15 +91,15 @@ Make sure to run `npm run build` before using this command:
 
 ## Technologies Used
 
-- Next.js: React framework for building server-side rendered applications.
-- React Hook Form: For managing form state and validation.
-- Zod: TypeScript-first schema validation.
-- Shadcn-ui: Components collection.
-- Drizzle ORM: Lightweight ORM for database interactions.
-- Hono: A small, simple, and fast web framework.
-- Tailwind CSS: Utility-first CSS framework for styling.
-- Vercel: Deployment platform for frontend applications.
-- Lucide-react: Icon library for React.
+- **Next.js:** React framework for building server-side rendered applications.
+- **React Hook Form:** For managing form state and validation.
+- **Zod:** TypeScript-first schema validation.
+- **Shadcn-ui:** Components collection.
+- **Drizzle ORM:** Lightweight ORM for database interactions.
+- **Hono:** A small, simple, and fast web framework.
+- **Tailwind CSS:** Utility-first CSS framework for styling.
+- **Vercel:** Deployment platform for frontend applications.
+- **Lucide-react:** Icon library for React.
 
 ## API Connection
 
@@ -107,24 +107,24 @@ The application connects to the Hacker News API to fetch top stories and their d
 
 Fetching Top Stories:
 
-- Endpoint: https://hacker-news.firebaseio.com/v0/topstories.json
-- Function: Retrieves a list of top story IDs.
-- Details: The application fetches details for each story ID, including title, author, time, and number of comments.
-- Feedback Form
+- **Endpoint:** https://hacker-news.firebaseio.com/v0/topstories.json
+- **Function:** Retrieves a list of top story IDs.
+- **Details:** The application fetches details for each story ID, including title, author, time, and number of comments.
+- **Feedback Form**
 
 ## Feedback Form
 
 The feedback form collects the following information:
 
-- Name
-- Email
-- Feedback
+- **Name**
+- **Email**
+- **Feedback**
 
 ### Form Validation
 
-1. Name: Minimum 2 characters.
-2. Email: Must be a valid email address.
-3. Feedback: Minimum 4 characters.
+1. **Name:** Minimum 2 characters.
+2. **Email:** Must be a valid email address.
+3. **Feedback:** Minimum 4 characters.
 
 Validation is handled using react-hook-form and Zod. Custom error messages are provided to guide the user in case of invalid input.
 
@@ -132,11 +132,11 @@ Validation is handled using react-hook-form and Zod. Custom error messages are p
 
 When a user submits the feedback form:
 
-- Validation: The form data is validated on the client side using react-hook-form and Zod.
-- Submission: Upon successful validation, the data is sent to the server API.
-- Logging: The server logs the feedback data to the console for review.
-- Feedback to User: A success message is displayed to the user, and the form is cleared.
-- Note: The form does not send data to an external server; it only logs the data on the server side for demonstration purposes.
+- **Validation:** The form data is validated on the client side using react-hook-form and Zod.
+- **Submission:** Upon successful validation, the data is sent to the server API.
+- **Logging:** The server logs the feedback data to the console for review.
+- **Feedback to User:** A success message is displayed to the user, and the form is cleared.
+- **Note:** The form send data to an internal server; it only logs the data on the server side for demonstration purposes.
 
 ## Responsive Design and Accessibility
 
@@ -144,10 +144,10 @@ The application is designed to be fully responsive, ensuring a seamless experien
 
 Key Accessibility Features
 
-- Semantic HTML: Proper use of HTML elements for better accessibility.
-- ARIA Attributes: Utilized where necessary to enhance screen reader support.
-- Keyboard Navigation: Ensured that all interactive elements are accessible via keyboard.
-- Color Contrast: Maintained sufficient color contrast for readability.
+- **Semantic HTML:** Proper use of HTML elements for better accessibility.
+- **ARIA Attributes:** Utilized where necessary to enhance screen reader support.
+- **Keyboard Navigation:** Ensured that all interactive elements are accessible via keyboard.
+- **Color Contrast:** Maintained sufficient color contrast for readability.
 
 ## Deployment
 
@@ -166,4 +166,4 @@ For more details, refer to the Next.js deployment documentation.
 
 ## Contact
 
-For any questions or feedback, please reach out via email.
+For any questions or feedback, please reach out via email **piotrek98golon@o2.pl**.
