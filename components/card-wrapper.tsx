@@ -8,16 +8,23 @@ import { ChevronLeftCircle } from "lucide-react";
 
 import { formatTimeAgo } from "@/lib/helpers";
 import { cn } from "@/lib/utils";
-// import Comment from "./comment";
+import { Comment } from "./comment";
 
 interface CardWrapperProps {
   title?: string;
   time?: number | undefined;
-  //   kids?: number[];
+  kids?: number[];
+  numberOfComments?: number;
   children: React.ReactNode;
 }
 
-export const CardWrapper = ({ title, time, children }: CardWrapperProps) => {
+export const CardWrapper = ({
+  title,
+  time,
+  kids,
+  numberOfComments,
+  children,
+}: CardWrapperProps) => {
   const formattedTime = time ? formatTimeAgo(time) : "";
 
   const pathname = usePathname();
@@ -54,16 +61,16 @@ export const CardWrapper = ({ title, time, children }: CardWrapperProps) => {
       </CardHeader>
       <CardContent className="flex-grow flex flex-col justify-end">
         {children}
-        {/* {kids && kids.length > 0 && (
+        {kids && kids.length > 0 && (
           <div className="ml-11 mt-6">
             <h3 className="text-lg font-semibold mb-4">
-              Comments ({kids.length})
+              Comments ({numberOfComments})
             </h3>
             {kids.map((commentId) => (
               <Comment key={commentId} commentId={commentId} />
             ))}
           </div>
-        )} */}
+        )}
       </CardContent>
     </Card>
   );
