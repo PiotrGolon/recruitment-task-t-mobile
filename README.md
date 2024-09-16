@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org) project that fetches and displays top st
 
 ## Live Demo
 
-Access the deployed application [here](https://recruitment-task-t-mobile.vercel.app/).
+Access the deployed application <a href="https://recruitment-task-t-mobile.vercel.app/" target="_blank" rel="noopener noreferrer">here</a>.
 
 ## Table of Contents
 
