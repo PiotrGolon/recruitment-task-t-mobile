@@ -47,7 +47,7 @@ export default function Home() {
           <CardWrapper key={story.id} title={story.title} time={story.time}>
             <div className="flex justify-end">
               <Link href={`/story/${story.id}`}>
-                <Button>
+                <Button aria-label={`Read more about ${story.title}`}>
                   Read more <ArrowUpRight className="ml-2 size-4 mr-0" />
                 </Button>
               </Link>
@@ -67,13 +67,14 @@ export default function Home() {
             variant="outline"
             className="font-normal bg-blue-600 text-white hover:bg-blue-500 hover:text-white border-none outline-none transition"
             onClick={loadLessStories}
+            aria-label="Load fewer stories"
           >
             Less <ChevronUpCircle className="size-4 ml-2" />
           </Button>
         )}
 
         {/* Load More button */}
-        <Button onClick={loadMoreStories}>
+        <Button aria-label="Load more stories" onClick={loadMoreStories}>
           More <ChevronDownCircle className="size-4 ml-2 mr-0" />
         </Button>
       </div>
